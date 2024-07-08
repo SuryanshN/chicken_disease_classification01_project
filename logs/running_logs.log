@@ -156,3 +156,75 @@ x==========x]
 [2024-07-08 14:52:46,624: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-07-08 15:02:04,752: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-08 15:02:04,755: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-08 15:02:04,757: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-08 15:02:04,758: INFO: common: created directory at: artifacts]
+[2024-07-08 15:02:04,759: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-08 15:02:29,051: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: E411:1C3729:1DF96B:29CA55:668BA605
+Accept-Ranges: bytes
+Date: Mon, 08 Jul 2024 09:32:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-hyd1100027-HYD
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1720431125.953718,VS0,VE268
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: df3c02561ae4d656ef4afca6da01a4fc2d96acd7
+Expires: Mon, 08 Jul 2024 09:37:05 GMT
+Source-Age: 0
+
+]
+[2024-07-08 15:02:29,454: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-08 15:02:40,024: INFO: stage_02_prepare_base_model: *******************]
+[2024-07-08 15:02:40,024: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-08 15:02:40,027: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-08 15:02:40,028: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-08 15:02:40,029: INFO: common: created directory at: artifacts]
+[2024-07-08 15:02:40,030: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-08 15:02:40,550: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-08 15:02:40,818: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-07-08 15:02:45,721: INFO: stage_03_training: *******************]
+[2024-07-08 15:02:45,721: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-07-08 15:02:45,725: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-08 15:02:45,726: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-08 15:02:45,727: INFO: common: created directory at: artifacts]
+[2024-07-08 15:02:45,728: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-07-08 15:02:45,729: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-07-08 15:02:45,732: INFO: common: created directory at: artifacts\training]
+[2024-07-08 15:17:39,936: INFO: stage_03_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-07-08 15:17:47,054: INFO: stage_04_evaluation: *******************]
+[2024-07-08 15:17:47,055: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-07-08 15:17:47,058: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-08 15:17:47,060: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-08 15:17:47,061: INFO: common: created directory at: artifacts]
+[2024-07-08 15:18:16,987: INFO: common: json file saved at: scores.json]
+[2024-07-08 15:18:16,989: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-07-08 15:21:31,172: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.0.144:80]
+[2024-07-08 15:21:31,173: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-07-08 15:23:59,453: INFO: _internal: 127.0.0.1 - - [08/Jul/2024 15:23:59] "GET / HTTP/1.1" 200 -]
+[2024-07-08 15:24:49,257: INFO: _internal: 127.0.0.1 - - [08/Jul/2024 15:24:49] "POST /predict HTTP/1.1" 200 -]
